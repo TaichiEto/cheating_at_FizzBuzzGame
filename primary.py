@@ -1,28 +1,13 @@
-
-from asyncio.windows_events import NULL
-
-
 while True:
-  
-  str_i = input("i=?")
-  if not str_i:
-    print("数字いれろや!")
-    
-  else:
-    
-
-    i = int(str_i)
-
-    #fizz buzz ゲームもどき
-    
+  try:
+    i = int(input("i=?"))
     if i % 15 == 0:
       print("fizz buzz")
     elif i % 3 == 0:
       print("fizz")
     elif i % 5 == 0:
-      print("buzz")
-    
+      print("buzz")1
     else:
-    
-
       print(i)
+  except ValueError:
+    print ("エラー：数字以外の文字を入力しないでください。")
