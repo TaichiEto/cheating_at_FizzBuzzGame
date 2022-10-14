@@ -10,4 +10,5 @@ while True:
     else:
       print(i)
   except ValueError:
+    #整数以外の値が入力された際の処理
     print ("エラー：数字以外の文字を入力しないでください。")
