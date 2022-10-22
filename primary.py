@@ -1,14 +1,19 @@
 while True:
-  try:
-    i = int(input("i=?"))
-    if i % 15 == 0:
-      print("fizz buzz")
-    elif i % 3 == 0:
-      print("fizz")
-    elif i % 5 == 0:
-      print("buzz")
+    try:
+        i_str = input("i=?")
+        if i_str == "exit":
+            #input "exit" to exit this script
+            break
+        else:
+            i = int(i_str)
+    except ValueError:
+        print("ERROR")
     else:
-      print(i)
-  except ValueError:
-    #整数以外の値が入力された際の処理
-    print ("ERROR")
+      if i % 15 == 0:
+        print("fizz buzz")
+      elif i % 3 == 0:
+        print("fizz")
+      elif i % 5 == 0:
+        print("buzz")
+      else:
+        print(i)
